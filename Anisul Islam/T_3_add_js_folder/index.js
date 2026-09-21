@@ -1,0 +1,1 @@
+alert("adding .js folder");
