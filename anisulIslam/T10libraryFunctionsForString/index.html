@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library functions for string</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        //var text = "Masunur";
+    
+        //prompt()
+        var text = prompt("Enter your name : "); //user er kach theke input neyar jonno prompt() function bebohar kora hoy
+
+        //length
+        var len = text.length; // string er length ber korar jonno .length bebohar kora hoy
+        document.write("Number of character " + len);
+
+        //charAt()
+        document.write("<br>Number 3 position character is " + text.charAt(3)); // charAt(3) function string er 3 number position e thaka character ta print korbe, string er postion 0 theke suru hoy
+
+        //toUpperCase & toLowerCase
+        text = text.toUpperCase();
+        document.write("<br>Upper case of the text : " + text);
+        text = text.toLowerCase();
+        document.write("<br>Lower case of the text : " + text);
+
+        //concat()
+        var text1 = '<b>Masunur<b>';
+        var text2 = ' <b>Rahman<b>';
+        var ftext = text1.concat(text2); // concat() function dara duti string ke jukto kora jay, text1.concat(text2) ekhane text1 O text2 string duti jukto hobe
+        document.write("<br>presented by " + ftext);
+
+        // slice()
+        
+        text = text.slice(0,3); //slice(0,3) er kaj holo ftext er string tir 0 index theke 3 index er ag porjonto, orthat 0 theke 2 index er value show korbe, 3 ta letter
+        document.write("<br> slice text is : " + text);
+    </script>
+</body>
+</html>
