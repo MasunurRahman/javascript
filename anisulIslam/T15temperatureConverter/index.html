@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    
+    <script>
+
+      //fahrenheit to celcius
+      var fahrenheit = parseFloat(prompt("Enter fahrenheit temperature : "));
+      var celcius = (fahrenheit-32) * 5 / 9;
+      document.write("Celcius : " + celcius.toFixed(2) + "<br/>");
+
+      //celcius to fahrenheit
+      var cels = parseFloat(prompt("Enter celcius temperature : "));
+      var farn = (cels*(9/5)) + 32;
+      document.write("Fahrenheit : " + farn.toFixed(2));
+    </script>
+</body>
+</html>

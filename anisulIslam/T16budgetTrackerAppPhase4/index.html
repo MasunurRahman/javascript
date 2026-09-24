@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker App</title>
+</head>
+<body>
+    
+    <script>
+        //Budget Tracker
+        const userName = prompt("Enter user name : ");
+        const income = parseFloat(prompt("Enter Income : "));
+        const expense = parseFloat(prompt("Enter expense : "));
+
+        const tax = (income * 10) / 100;
+        const netIncome = income - tax;
+        const remaining = netIncome - expense;
+        const savings = (remaining * 20) / 100;
+
+        document.write("Personal Budget Tracker<br/>");
+        document.write("User : " + userName + "<br/>");
+        document.write("Total Income : $" + income + "<br/>");
+        document.write("Total Expenses : $" + expense + "<br/>");
+        document.write("Tax Deducted (10%) : $" + tax + "<br/>")
+        document.write("Net Income After Tax : $" + netIncome + "<br/>")
+        document.write("Remaining Balance : $" + remaining + "<br/>")
+        document.write("Savings (20% of balance) : $" + savings + "<br/>")
+
+    </script>
+</body>
+</html>

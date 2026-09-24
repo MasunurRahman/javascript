@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Calculator</title>
+</head>
+<body>
+    
+    <script>
+
+      var num1 = prompt("Enter first number : ");
+      var num2 = prompt("Enter Second number : ");//prompt e input nile seta string hisebe ashe, setake abar int e convert korte hoy
+      num1 = parseInt(num1,10);// parseInt(num1) dileo hobe, tobe parseInt(num1,10) dile doshomik songkha nischit korbe
+      num2 = parseInt(num2,10);
+      var sum= num1 + num2;
+      var sub= num1 - num2;
+      document.write("sum : ", + sum + "<br/>");
+      document.write("sub : ", + sub + "<br/>");
+    </script>
+</body>
+</html>
