@@ -1,0 +1,52 @@
+//Budget Tracker using Loop
+
+        const userName = prompt("Enter user name : ");
+        const income = parseFloat(prompt("Enter Income : "));
+        const expenseNumber = parseFloat(prompt("How many expenses you have?: "));
+        
+        // validate inputs to ensure they are numbers and not negative- isNaN checks if the value is not a number
+        if (isNaN(income) || isNaN(expenseNumber) || income <= 0 || expenseNumber < 0) {
+            console.log("Invalid income or expense number. Please enter positive numbers.");
+        }
+        else {
+            let expense = 0;
+        for(let i = 1; i <= expenseNumber; i++){
+            const expenses = [];
+            let expenseValue = parseFloat(prompt(`Enter Expense ${i}: `));
+            if (isNaN(expenseValue) || expenseValue < 0) {
+                console.log(`Invalid expense value in iteration ${i}. setting expense to 0 for this iteration.`);
+                expenseValue = 0;
+            }
+            expenses.push(expenseValue);
+            for (let j = 0; j < expenses.length; j++) {
+                expense += expenses[j];
+            }
+        }
+
+        const tax = (income * 10) / 100;
+        const netIncome = income - tax;
+        const remaining = netIncome - expense;
+        const savings = (remaining * 20) / 100;
+
+        console.log("Personal Budget Tracker\n");
+        console.log("User : " + userName + '\n');
+        console.log("Total Income : $" + income +'\n');
+        console.log("Total Expenses : $" + expense +'\n');
+        console.log("Tax Deducted (10%) : $" + tax +'\n');
+        console.log("Net Income After Tax : $" + netIncome +'\n');
+        console.log("Remaining Balance : $" + remaining +'\n');
+        console.log("Savings (20% of balance) : $" + savings +'\n');
+
+
+        if(savings >= 1000)
+            console.log('Excelent');
+        else if(savings >= 500)
+            console.log('Good');
+        else if(savings >= 100)
+            console.log('Needs Improvement');
+        else 
+            console.log('Critical');
+
+        if(income < expense)
+            console.log('Warning : You are spending more than your income');
+    }
