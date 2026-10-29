@@ -1,4 +1,4 @@
-//Budget Tracker using Loop
+//Budget Tracker using Array
 
         const userName = prompt("Enter user name : ");
         const income = parseFloat(prompt("Enter Income : "));
